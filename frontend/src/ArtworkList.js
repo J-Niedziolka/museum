@@ -37,10 +37,27 @@ class ArtworkList extends Component {
             return <p>Loading...</p>;
         }
     
+        // id: '',
+        // title: '',
+        // type: '',
+        // author: '',
+        // date: '',
+        // ifRenovation: '',
+        // ifExhibition: '',
+        // history: '',
+        // details: '',
+        // ifExhibition: '',
         const artworkList = artworks.map(artwork => {
             return <tr key={artwork.id}>
                 <td style={{whiteSpace: 'nowrap'}}>{artwork.title}</td>
+                <td>{artwork.type}</td>
                 <td>{artwork.author}</td>
+                <td>{artwork.date}</td>
+                <td>{artwork.ifRenovation}</td>
+                <td>{artwork.ifExhibition}</td>
+                <td>{artwork.history}</td>
+                <td>{artwork.details}</td>
+                <td>{artwork.exhibition}</td>
                 <td>
                     <ButtonGroup>
                         <Button size="sm" color="primary" tag={Link} to={"/artworks/" + artwork.id}>Edit</Button>

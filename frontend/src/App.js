@@ -5,6 +5,21 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ArtworkList from './ArtworkList';
 import ArtworkEdit from "./ArtworkEdit";
 
+class App extends Component {
+  render() {
+    return (
+        <Router>
+          <Switch>
+            <Route path='/' exact={true} component={Home}/>
+            <Route path='/artworks' exact={true} component={ArtworkList}/>
+            <Route path='/artworks/:id' component={ArtworkEdit}/>
+          </Switch>
+        </Router>
+    );
+  }
+}
+
+export default App;
 
 
 // function App() {
@@ -61,20 +76,3 @@ import ArtworkEdit from "./ArtworkEdit";
 //     );
 //   }
 // }
-
-class App extends Component {
-  render() {
-    return (
-        <Router>
-          <Switch>
-            <Route path='/' exact={true} component={Home}/>
-            <Route path='/artworks' exact={true} component={ArtworkList}/>
-            <Route path='/artworks/:id' component={ArtworkEdit}/>
-          </Switch>
-        </Router>
-    )
-  }
-}
-
-
-export default App;

@@ -25,6 +25,7 @@ public class ArtworkService {
         return artworkRepository.findById(id).orElseThrow(RuntimeException::new);
     }
 
+
     public Artwork saveArtwork(Artwork artwork){
         return artworkRepository.save(artwork);
     }

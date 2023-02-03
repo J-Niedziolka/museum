@@ -1,4 +1,4 @@
-package edu.uph.ii.jn.museum.components;
+package edu.uph.ii.jn.museum.configs;
 
 import edu.uph.ii.jn.museum.models.Artwork;
 import edu.uph.ii.jn.museum.repositories.ArtworkRepository;
@@ -27,7 +27,6 @@ public class InitializingArtwork {
         return () -> {
             if (artworkRepository.findAll().isEmpty()) {
                 LocalDate date1 = LocalDate.of(2023, 2, 3);
-                // create some Artwork objects and save them to the database using the repository
                 Artwork artwork1 = new Artwork();
                 artwork1.setId(1);
                 artwork1.setTitle("obraz1");
@@ -40,7 +39,6 @@ public class InitializingArtwork {
                 artwork1.setIfExhibition(false);
                 artwork1.setDetails(null);
 
-                //Artwork artwork1 = new Artwork(1, date1, "obraz","pejzaż","nowak","brak",true,false,null,null);
 //                Artwork artwork2 = new Artwork();
 //                Artwork artwork3 = new Artwork();
 

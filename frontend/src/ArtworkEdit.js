@@ -12,8 +12,16 @@ class ArtworkEdit extends Component {
     }
 
     emptyItem = {
+        id: '',
         title: '',
-        author: ''
+        type: '',
+        author: '',
+        date: '',
+        ifRenovation: '',
+        ifExhibition: '',
+        history: '',
+        details: '',
+        ifExhibition: '',
     };
 
     constructor(props) {
@@ -68,6 +76,11 @@ class ArtworkEdit extends Component {
                         <Input type="text" name="author" id="author" value={item.author || ''}
                                onChange={this.handleChange} autoComplete="author"/>
                     </FormGroup>
+                    {/* <FormGroup>
+                        <Label for=""></Label>
+                        <Input type="" name="" id="" value={item. || ''}
+                               onChange={this.handleChange} autoComplete=""/>
+                    </FormGroup> */}
                     <FormGroup>
                         <Button color="primary" type="submit">Save</Button>{' '}
                         <Button color="secondary" tag={Link} to="/artworks">Cancel</Button>
