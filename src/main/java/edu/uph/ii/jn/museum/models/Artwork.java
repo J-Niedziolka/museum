@@ -16,11 +16,9 @@ public class Artwork {
     private String history;
     private Boolean ifExhibition;
     private Boolean ifRenovation;
-
     @OneToOne(cascade = CascadeType.ALL)  //TODO sprawdzić czy cascade = CascadeType.all
     @JoinColumn(name = "details_id", referencedColumnName = "id")
     private ArtworkDetails details;
-
     @ManyToOne
     @JoinColumn(name= "exhibitions_id")
     private Exhibition exhibition;

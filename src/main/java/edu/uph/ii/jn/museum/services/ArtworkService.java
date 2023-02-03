@@ -21,13 +21,15 @@ public class ArtworkService {
     }
 
     public Artwork findArtworkById(Long id){
-        //TODO ZMIENIC NULL NA TRY CATCH
-        return artworkRepository.findById(id).orElse(null);
+        //TODO sprawdzic to
+        return artworkRepository.findById(id).orElseThrow(RuntimeException::new);
     }
 
     public Artwork saveArtwork(Artwork artwork){
         return artworkRepository.save(artwork);
     }
 
-    //TODO sprawdzić czy dodawac też metodę deleteArtwork
+    public void deleteArtwork(Long id){
+        this.artworkRepository.deleteById(id);
+    }
 }
